@@ -1,0 +1,14 @@
+{
+  "name": "exercise_ppt_game_modules",
+  "version": "1.0.0",
+  "description": "In game.html a lot of script tags are used to reference other code.\r This can lead to a cluttered and hard to maintain codebase.\r Modules can help organize and modularize your code, making it easier to maintain and debug your code.",
+  "main": "game.js",
+  "scripts": {
+    "test": "node tests/unittests.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.1.2"
+  }
+}

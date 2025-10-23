@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Practice ifs and loops in JavaScript</title>
+  <script src="testlibrary.js"></script>
+</head>
+<body>
+
+<h1>Check the developer tools to show the results of the unit tests</h1>
+<p>Adjust the code in such a way that all these tests will pass</p>
+
+<script>
+  function exercise(){
+    // /////////////////////////////////////////////////////////////////////////////////
+    // Write a function xor that compares two booleans.
+    //
+    // b1: true, b2: true => false
+    // b2: false, b2: false => false
+    // b2: false, b2: true => true
+    // b2: true, b2: false => true
+    // /////////////////////////////////////////////////////////////////////////////////
+
+    function add(number1, number2){
+      // ****************************************
+      // DO NOT CHANGE ANYTHING ABOVE THIS LINE
+
+      // xor
+      if (number1 && number2) return false;
+      if (!number1 && !number2) return false;
+      if (!number1 && number2) return true;
+      if (number1 && !number2) return true;
+
+      // DO NOT CHANGE ANYTHING BELOW THIS LINE
+      // ****************************************
+    }
+
+    return add;
+  }
+
+  // Unit Test script (this will test your code)
+  test([false,true], true, exercise());
+  test([true,false], true, exercise());
+  test([true, true], false, exercise());
+  test([false,false], false, exercise());
+</script>
+</body>
+</html>

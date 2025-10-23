@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // Write the result of the following expressions in the comments
+    // ------------------------------------------------------------------------------------------------------------
+    console.log(10 + 5 * 2); // Answer:
+    console.log(5 * 2 + 10); // Answer:
+    console.log((10 + 5) * 2); // Answer:
+
+    // ------------------------------------------------------------------------------------------------------------
+    const a = 5 - 2;
+    const b = 2 - 5;
+    console.log(a, b);  // Answer:
+
+    // ------------------------------------------------------------------------------------------------------------
+    const c = !0 + 1 * 5;
+    const d = !(0 + 1) * 5;
+    console.log(c, d);  // Answer:
+
+    // ------------------------------------------------------------------------------------------------------------
+    function echo(n) {
+        return n;
+    }
+
+    console.log(3 + echo(7 - 3) * 5); // Answer:
+    console.log(3 + 7 - 3 * 5); // Answer:
+    console.log(3 + (7 - 3) * 5); // Answer:
+
+    // ------------------------------------------------------------------------------------------------------------
+    // The OR (||) operator returns the first 'truthy' value or the last if no 'truthy' value is found.
+    const e = 0;
+    const f = 1;
+    const g = 42;
+    const h = e || f || g;
+    console.log(h); // Answer:
+
+    // ------------------------------------------------------------------------------------------------------------
+    const i = 5 * 0 || 3;
+    const j = 5 * (0 || 3);
+    console.log(i); // Answer:
+    console.log(j); // Answer:
+
+    // ------------------------------------------------------------------------------------------------------------
+    // Assignment goes from right to left
+    let k = 40;
+    const l = k = 5;
+    console.log(k, l); // Answer:
+
+    // ------------------------------------------------------------------------------------------------------------
+    let m = -1;
+    let n = (4 + 5 * 2) / 2 - 7 || 3 + --m;
+    console.log(n); // Answer:
+
+
+</script>
+
+</body>
+</html>

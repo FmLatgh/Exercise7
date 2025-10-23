@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Practice ifs and loops in JavaScript</title>
+  <script src="testlibrary.js"></script>
+</head>
+<body>
+
+<h1>Check the developer tools to show the results of the unit tests</h1>
+<p>Adjust the code in such a way that all these tests will pass</p>
+
+<script>
+  function exercise(aParameter){
+
+    // /////////////////////////////////////////////////////////////////////////////////
+    // Write a function addElementsInArray that add all numbers in the array.
+    // Number toArray(array)
+    //
+    // Example:
+    // [1,2,3] => 6
+    // [-1, 0 ,2] => 1
+    // /////////////////////////////////////////////////////////////////////////////////
+
+    function addElementsInArray(anArrayWithNumbers){
+      // ****************************************
+      // DO NOT CHANGE ANYTHING ABOVE THIS LINE
+
+      let sum = 0;
+      // Loop through the array and add all numbers
+      /*
+        for (let i = 0; i < anArrayWithNumbers.length; i++) {
+          sum += anArrayWithNumbers[i];
+        }
+        return sum;
+      */
+
+      // OR with reduce method
+      sum = anArrayWithNumbers.reduce((a, b) => a + b, 0);
+      return sum;
+
+      // DO NOT CHANGE ANYTHING BELOW THIS LINE
+      // ****************************************
+    }
+
+    return addElementsInArray(aParameter);
+  }
+
+  // Unit Test script (this will test your code)
+  test([[1,2,3]], 6, exercise);
+  test([[-1,0,2]], 1, exercise);
+</script>
+</body>
+</html>

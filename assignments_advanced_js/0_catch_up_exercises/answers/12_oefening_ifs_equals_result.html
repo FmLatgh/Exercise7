@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Practice ifs and loops in JavaScript</title>
+  <script src="testlibrary.js"></script>
+</head>
+<body>
+
+<h1>Check the developer tools to show the results of the unit tests</h1>
+<p>Adjust the code in such a way that all these tests will pass</p>
+
+<script>
+  function exercise(aParameter){
+
+    // /////////////////////////////////////////////////////////////////////////////////
+    // Write the code that checks if aParameter is equal to 3 and NOT "3"
+    //
+    // For example:
+    // 3 gives true and '3' gives false
+    // /////////////////////////////////////////////////////////////////////////////////
+
+    let result;
+    // ****************************************
+    // DO NOT CHANGE ANYTHING ABOVE THIS LINE
+
+    if(aParameter === 3 && aParameter !== "3"){
+      result = true;
+    } else {
+      result = false;
+    }
+
+    // DO NOT CHANGE ANYTHING BELOW THIS LINE
+    // ****************************************
+    return result;
+  }
+
+  // Unit Test script (this will test your code)
+  test([3], true, exercise);
+  test(["3"], false, exercise);
+  test(["hallo"], false, exercise);
+  test(["4"], false, exercise);
+  test([4], false, exercise);
+</script>
+
+</body>
+</html>

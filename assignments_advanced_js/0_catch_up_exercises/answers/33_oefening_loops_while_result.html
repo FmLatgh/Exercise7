@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Practice ifs and loops in JavaScript</title>
+  <script src="testlibrary.js"></script>
+</head>
+<body>
+
+<h1>Check the developer tools to show the results of the unit tests</h1>
+<p>Adjust the code in such a way that all these tests will pass</p>
+
+<script>
+  function exercise(aParameter){
+
+    // /////////////////////////////////////////////////////////////////////////////////
+    // Write a WHILE-loop the code that creates the next pattern depending on the passed number
+    //
+    // Example:
+    // aParameter=3: * **  ***
+    // aParameter=5: * **  *** **** *****
+    // aParameter<=1: *
+    // /////////////////////////////////////////////////////////////////////////////////
+
+    let result = "";
+    // ****************************************
+    // DO NOT CHANGE ANYTHING ABOVE THIS LINE
+
+    // if the parameter is lower than or equal to 1, return a single star
+    if(aParameter <= 1) {
+      return "*";
+    }
+
+    let nr = 1;
+    while (nr <= aParameter) {
+      for (let i = 0; i < nr; i++) {
+        result += "*";
+      }
+      result += " ";
+      nr++;
+    }
+    // Remove last space
+    result = result.trim();
+
+    // DO NOT CHANGE ANYTHING BELOW THIS LINE
+    // ****************************************
+    return result;
+  }
+
+  // Unit Test script (this will test your code)
+  test([-1], "*", exercise);
+  test([0], "*", exercise);
+  test([1], "*", exercise);
+  test([2], "* **", exercise);
+  test([10], "* ** *** **** ***** ****** ******* ******** ********* **********", exercise);
+</script>
+</body>
+</html>

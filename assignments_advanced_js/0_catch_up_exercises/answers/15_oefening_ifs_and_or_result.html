@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Practice ifs and loops in JavaScript</title>
+  <script src="testlibrary.js"></script>
+</head>
+<body>
+
+<h1>Check the developer tools to show the results of the unit tests</h1>
+<p>Adjust the code in such a way that all these tests will pass</p>
+
+<script>
+  function exercise(aParameter1, aParameter2){
+
+    // /////////////////////////////////////////////////////////////////////////////////
+    // Write code that checks:
+    // whether aParameter1 is "admin" AND aParameter2 is "1234"
+    // OR aParameter1 is "user" AND aParameter2 is "password"
+    // /////////////////////////////////////////////////////////////////////////////////
+
+    let result;
+    // ****************************************
+    // DO NOT CHANGE ANYTHING ABOVE THIS LINE
+
+    if((aParameter1 === "admin" && aParameter2 === "1234") || (aParameter1 === "user" && aParameter2 === "password")){
+      result = true;
+    } else {
+      result = false;
+    }
+
+    // DO NOT CHANGE ANYTHING BELOW THIS LINE
+    // ****************************************
+    return result;
+  }
+
+  // Unit Test script (this will test your code)
+  test(["admin","1234"], true, exercise);
+  test(["user","password"], true, exercise);
+  test(["1234","admin"], false, exercise);
+  test(["password","user"], false, exercise);
+  test(["admin","password"], false, exercise);
+  test(["user","1234"], false, exercise);
+</script>
+
+</body>
+</html>

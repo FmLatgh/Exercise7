@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Practice ifs and loops in JavaScript</title>
+  <script src="testlibrary.js"></script>
+</head>
+<body>
+
+<h1>Check the developer tools to show the results of the unit tests</h1>
+<p>Adjust the code in such a way that all these tests will pass</p>
+
+<script>
+  function exercise(aParameter){
+
+    // /////////////////////////////////////////////////////////////////////////////////
+    // Write a FOR-loop that counts back which counts backwards depending
+    // on the passed number in aParameter
+    //
+    // Example:
+    // aParameter < 0: Out of range
+    // aParameter=0: 0
+    // aParameter=1: 1   0
+    // aParameter=3: 3   2   1   0
+    // aParameter=6: 6   5   4   3   2   1   0
+    // /////////////////////////////////////////////////////////////////////////////////
+
+    let result = "Out of range";
+    // ****************************************
+    // DO NOT CHANGE ANYTHING ABOVE THIS LINE
+
+    // Check if the parameter is out of range
+    if(aParameter < 0) {
+      result = "Out of range";
+    } else {
+      result = "";
+      for(let i = aParameter; i >= 0; i--) {
+        result += i + " ";
+      }
+    }
+    // Remove last space
+    result = result.trim();
+
+    // DO NOT CHANGE ANYTHING BELOW THIS LINE
+    // ****************************************
+    return result;
+  }
+
+  // Unit Test script (this will test your code)
+  test([6], "6 5 4 3 2 1 0", exercise);
+  test([1], "1 0", exercise);
+  test([0], "0", exercise);
+  test([-1], "Out of range", exercise);
+</script>
+</body>
+</html>

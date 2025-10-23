@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Practice ifs and loops in JavaScript</title>
+  <script src="testlibrary.js"></script>
+</head>
+<body>
+
+<h1>Check the developer tools to show the results of the unit tests</h1>
+<p>Adjust the code in such a way that all these tests will pass</p>
+
+<script>
+  function exercise(aParameter){
+
+    // /////////////////////////////////////////////////////////////////////////////////
+    // Write a function toArray that has three parameters.
+    // Convert these three values to an array.
+    // Array toArray(p1, p2, p3)
+    //
+    // Example:
+    // p1: 'a' p2: 'b' p3: 'count' => ['a', 'b', 'count']
+    // p1: true p2: 'b' p3: 4 => [true, 'b', 4]
+    // p1: undefined p2: null p3: "" => [udefined, null, ""]
+    // /////////////////////////////////////////////////////////////////////////////////
+
+    function toArray(number1, number2, number3){
+      // ****************************************
+      // DO NOT CHANGE ANYTHING ABOVE THIS LINE
+
+      // YOUR CODE HERE
+      return [number1, number2, number3];
+
+      // DO NOT CHANGE ANYTHING BELOW THIS LINE
+      // ****************************************
+    }
+
+    return toArray;
+  }
+
+  // Unit Test script (this will test your code)
+  test(['a','b','c'], ['a','b','c'], exercise());
+  test([true,'b',4], [true,'b',4], exercise());
+  test([undefined,null,""], [undefined,null,""], exercise());
+</script>
+</body>
+</html>

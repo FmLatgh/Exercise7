@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Practice ifs and loops in JavaScript</title>
+  <script src="testlibrary.js"></script>
+</head>
+<body>
+
+<h1>Check the developer tools to show the results of the unit tests</h1>
+<p>Adjust the code in such a way that all these tests will pass</p>
+
+<script>
+  function exercise(){
+    // /////////////////////////////////////////////////////////////////////////////////
+    // Write a function that will paste the string "<p>" in front of the passed parameter and "</p>" behind the parameter.
+    // This is the signature of the function you should write:
+    // String toParagraph(parameter)
+    // Example:
+    // "This is a text" => "<p>This is a text</p>"
+    // /////////////////////////////////////////////////////////////////////////////////
+
+    function toParagraph(parameter){
+      // ****************************************
+      // DO NOT CHANGE ANYTHING ABOVE THIS LINE
+
+      return "<p>" + parameter + "</p>";
+
+      // DO NOT CHANGE ANYTHING BELOW THIS LINE
+      // ****************************************
+    }
+
+    return toParagraph;
+  }
+
+  // Unit Test script (this will test your code)
+  test(["This is a text"], "<p>This is a text</p>", exercise());
+  test([""], "<p></p>", exercise());
+</script>
+</body>
+</html>

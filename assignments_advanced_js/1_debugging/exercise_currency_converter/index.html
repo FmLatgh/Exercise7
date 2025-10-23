@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Currency Converter Debugging Exercise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="converter">
+    <h2>Currency Converter</h2>
+    <input type="number" id="amount" placeholder="Enter amount"/>
+    <select id="fromCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+    </select>
+    <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="GBP">GBP</option>
+        <option value="JPY">JPY</option>
+    </select>
+    <button onclick="convertCurrency()">Convert</button>
+    <p id="result"></p>
+</div>
+
+<script src="converter.js"></script>
+</body>
+</html>
