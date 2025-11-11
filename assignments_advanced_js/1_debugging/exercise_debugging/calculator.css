@@ -9,7 +9,7 @@ body {
 
 .calculator {
     background-color: #fff;
-    padding: 20px;
+    padding: 50px; /* padding to fix leaning display */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -25,11 +25,21 @@ body {
 }
 
 .calculator button {
-    width: 25%;
+    width: 60px; /* fixed width for uniform buttons */
+    height: 60px; /* fixed height for uniform buttons */
     padding: 10px;
     font-size: 1.2em;
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: #e0e0e0;
     margin: 2px;
+    display: inline-block; /* ensure buttons stay inline */
+
+}
+
+/* I hate making grids, so we now have button rows */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
 }

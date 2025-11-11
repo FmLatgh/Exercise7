@@ -23,3 +23,5 @@ async function convertCurrency() {
         document.getElementById('result').innerText = "Error fetching exchange rate. Please try again later.";
     }
 }
+
+//wait was this meant to be broken? doesn't look broke to me
