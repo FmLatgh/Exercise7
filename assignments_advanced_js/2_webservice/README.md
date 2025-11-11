@@ -77,20 +77,15 @@ Follow these steps:
 2. Create an account and get an API key: https://fdc.nal.usda.gov/api-key-signup.html
 3. Download the Postman app (https://www.postman.com/downloads/). This app allows you to make network requests to a webservice and see the response.
 4. Try to get data in Postman by making a request to: `https://api.nal.usda.gov/fdc/v1/foods/list?api_key=[api-key]&query=gouda`
-5. Now we want te retrieve data from a web application. Use the project you've set up in the previous lesson.
-6. Create a new function called `getData`in your JavaScript file that uses the `fetch` function to make a network request to the API.
-7. Call the `getData` function when a button is clicked.
-8. First try to log the data to the console. 
-9. If that works, try to display all descriptions of the found food products on the page.
-10. Add a search field to the page that allows the user to search for specific types of food.
-11. When the user clicks on the product, show a list of the nutrients.
-
-### Exercise 2: anticipate the project Rijksmuseum
-1. Create a new function called `getArt` in your JavaScript file that uses the `fetch` function to make a network request to the Rijksmuseum API.
-2. The function should get a random piece of art from the Rijksmuseum API.
-3. Call the `getArt` function when you scroll the page.
-4. Show the image of the piece of art on the page and rotate while scrolling.
-5. Show the description of the piece of art on its back.
+5. Now we want te retrieve data from a web application. 
+6. Create an html file with a button and a div to display the data.
+7. Create a new javascript file called `fetchData.js` and link it to the html file.
+8. Create a function called `getData`in this file that uses the `fetch` function to make a request to the API.
+8. Call the `getData` function when a button is clicked.
+9. First try to log the data to the console. 
+10. If that works, try to display all descriptions of the found food products on the page.
+11. Extra: Add a search field to the page that allows the user to search for specific types of food. 
+ When the user clicks on the product, show a list of the nutrients.
 
 ### Extra exercise: create a web application for a library
 Your task is to create a web application for a library:
