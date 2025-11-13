@@ -8,11 +8,14 @@
  * @param deg number degrees to rotate el
  * @returns el HTMLElement-object
  */
+// function rotateFD(el, deg) {
+//     el.style.transform = `rotate(${deg}deg)`;
+//     return el;
+// }
 function rotateFD(el, deg) {
     el.style.transform = `rotate(${deg}deg)`;
     return el;
 }
-
 
 //////////////////////////////////////////////
 //  TODO: as a 'function expression': rotateFE
@@ -24,6 +27,10 @@ function rotateFD(el, deg) {
  * @param deg number degrees to rotate el
  * @returns el HTMLElement-object
  */
+const rotateFE = function (el, deg) {
+    el.style.transform = `rotate(${deg}deg)`;
+    return el;
+}
 
 
 //////////////////////////////////////////////
@@ -36,7 +43,10 @@ function rotateFD(el, deg) {
  * @param deg number degrees to rotate el
  * @returns el HTMLElement-object
  */
-
+let rotateAF = (el, deg) => {
+    el.style.transform = `rotate(${deg}deg)`;
+    return el;
+}
 
 
 

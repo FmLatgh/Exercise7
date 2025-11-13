@@ -2,16 +2,15 @@
 // The players of the 'main'
 // -------------------------
 
-// Player 1
-const player1 = {
-    name: 'Jean',
-    lives: 3,
-    medikit: false
-};
+// so no objects..?
+//pclass
+class Player {
+  constructor(name, lives, medikit) {
+    this.name = name;
+    this.lives = lives;
+    this.medikit = medikit;
+  }
+}
 
-// Player 2
-const player2 = {
-    name: 'Pierre',
-    lives: 2,
-    medikit: true
-};
+const player1 = new Player('Jean', 3, false);
+const player2 = new Player('Pierre', 2, true);

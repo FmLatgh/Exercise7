@@ -18,12 +18,15 @@ function show(players) {
 // -----------------------------------------------------
 
 /**
- * Function removeLive
+ * Function removeLife
  * Decreases the lifes of a player object by 1
  * @param player (a player object is passed as a parameter)
  */
 // Here your function declaration
-
+function removeLive(player) {
+    player.lives -= 1;
+    console.log(player.name + " lost a life!");
+}
 
 
 /**
@@ -32,7 +35,9 @@ function show(players) {
  * @param player (a player object is passed as a parameter)
  */
 // Here your function declaration
-
+function toggleMedikit(player) {
+  player.medikit = false;
+}
 
 /**
  * Function hasMedikit
@@ -41,3 +46,6 @@ function show(players) {
  * @returns {boolean}
  */
 // Here your function expression
+const hasMedikit = function(player) {
+  return player.medikit;
+};
