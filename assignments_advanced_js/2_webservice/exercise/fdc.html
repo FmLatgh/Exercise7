@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>USDA FDC Search — Accordion Results</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div>
+          <h1>USDA FDC Search</h1>
+          <p class="lead">
+            Search foods (example: "gouda") and view results in accordion-style
+            tabs.
+          </p>
+        </div>
+      </header>
+
+      <form id="searchForm" class="controls" onsubmit="return false;">
+        <input
+          id="apiKey"
+          type="password"
+          placeholder="Paste API key here"
+          aria-label="API key"
+        />
+        <input
+          id="query"
+          type="text"
+          placeholder='Search term (e.g. "gouda")'
+          value="gouda"
+          aria-label="search term"
+        />
+        <div class="controls-right">
+          <label class="small" for="limit">max results</label>
+          <input
+            id="limit"
+            type="text"
+            value="25"
+            style="width: 60px"
+            aria-label="result limit"
+          />
+          <button id="searchBtn" type="button">Search</button>
+          <button
+            id="clearBtn"
+            type="button"
+            style="
+              background: transparent;
+              color: var(--muted);
+              border: 1px solid rgba(255, 255, 255, 0.04);
+            "
+          >
+            Clear
+          </button>
+        </div>
+      </form>
+
+      <div class="meta" id="meta"></div>
+
+      <div id="results" class="results" aria-live="polite"></div>
+
+      <div id="empty" class="empty" style="display: none">
+        No results yet. Enter a query and click Search.
+      </div>
+    </div>
+    <script src="./fetchData.js"></script>
+  </body>
+</html>
