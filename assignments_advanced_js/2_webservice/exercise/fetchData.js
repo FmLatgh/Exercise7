@@ -1,8 +1,3 @@
-// Core async fetch function — uses the USDA FDC "foods/list" endpoint.
-// NOTE: replace the API key with your own. The form includes an API key field.
-// The USDA FDC API may be subject to CORS depending on the environment.
-// If you see a CORS error, run this from a simple local server or create a small proxy.
-
 const searchBtn = document.getElementById('searchBtn');
 const clearBtn = document.getElementById('clearBtn');
 const resultsEl = document.getElementById('results');
@@ -19,11 +14,11 @@ searchBtn.addEventListener('click', async () => {
     emptyEl.style.display = 'none';
 
     if (!apiKey) {
-        metaEl.textContent = '⚠️ Please paste your USDA FDC API key in the API key field.';
+        metaEl.textContent = 'Please paste your USDA FDC API key in the API key field.';
         return;
     }
     if (!q) {
-        metaEl.textContent = '⚠️ Enter a query (for example: "gouda").';
+        metaEl.textContent = 'Enter a query (for example: "gouda").';
         return;
     }
 
@@ -34,13 +29,9 @@ searchBtn.addEventListener('click', async () => {
 
     try {
         const start = performance.now();
-        // build URL (encode query). FDC "foods/list" accepts "query" and some other params depending on the dataset.
         const url = new URL('https://api.nal.usda.gov/fdc/v1/foods/list');
         url.searchParams.set('api_key', apiKey);
         url.searchParams.set('query', q);
-        // optional: request a specific dataType? url.searchParams.set('dataType','Branded');
-        // we won't request additional fields here — the API returns objects; we'll inspect them.
-
         const resp = await fetch(url.toString());
         if (!resp.ok) {
             throw new Error(`HTTP ${resp.status} — ${resp.statusText}`);
@@ -55,10 +46,10 @@ searchBtn.addEventListener('click', async () => {
             return;
         }
 
-        // Limit results for display
+        // Limit result
         const items = data.slice(0, limit);
 
-        // Build accordion entries
+        // Build entry
         items.forEach((item, idx) => {
             const details = document.createElement('details');
             if (idx === 0) details.open = true; // open first for convenience
@@ -128,7 +119,7 @@ searchBtn.addEventListener('click', async () => {
                 leftCol.appendChild(nut);
             }
 
-            // small action row: copy JSON
+            // copy JSON
             const actions = document.createElement('div'); actions.className='controls-row';
             actions.style.marginTop = '10px';
             const copyBtn = document.createElement('button');
@@ -147,7 +138,7 @@ searchBtn.addEventListener('click', async () => {
 
             body.appendChild(leftCol);
 
-            // right column: preformatted JSON for quick inspection
+            // right column: preformatted JSON
             const rightCol = document.createElement('div');
             const pre = document.createElement('pre');
             pre.className = 'json';
@@ -185,9 +176,7 @@ function escapeHtml(s) {
     return s.replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 }
 
-// quick-run if page loaded and default query exists:
+//if loaded
 window.addEventListener('load', () => {
-    // do not auto-run search because the user needs to provide an API key.
-    // if you want to auto-run, uncomment the next line (and ensure API key field is filled).
-    // document.getElementById('searchBtn').click();
+
 });
