@@ -1,0 +1,15 @@
+{
+  "name": "deelite_gsap",
+  "version": "1.0.0",
+  "description": "Animations make your website more interactive and engaging for users.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.14.1",
+    "vite": "^7.2.7"
+  }
+}
