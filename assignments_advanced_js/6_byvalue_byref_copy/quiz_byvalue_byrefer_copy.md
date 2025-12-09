@@ -11,6 +11,7 @@ const names = ['John', 'Jane', 'Jack', 'Jill'];
 names = ['James', 'Jenny', 'Jake', 'Jasmine'];
 console.log(names);
 ```
+Array(4) [ "John", "Jane", "Jack", "Jill" ]
 
 ### Question 2
 What will be logged to the console?
@@ -20,6 +21,7 @@ const names = ['John', 'Jane', 'Jack', 'Jill'];
 names.push('Jenny');
 console.log(names);
 ```
+Array(5) [ "John", "Jane", "Jack", "Jill", "Jenny" ]
 
 ### Question 3
 What will be the output of the following code?
@@ -29,6 +31,7 @@ let arr = [10, 20, 30];
 arr[100] = 1000;
 console.log(arr.length);
 ```
+101
 
 ### Question 4
 What will be the output?
@@ -39,6 +42,7 @@ let copy = obj;
 obj.a = 2;
 console.log(copy.a);
 ```
+1
 
 ### Question 5
 What will be logged to the console?
@@ -49,6 +53,7 @@ let b = a;
 a = 10;
 console.log(b);
 ```
+5
 
 ### Question 6
 What will be the output of the following code?
@@ -63,6 +68,7 @@ const title = "The Starry Night";
 showDetails(title);
 console.log(title);
 ```
+The Starry Night
 
 ### Question 7
 What will be the output of the following code?
@@ -81,6 +87,7 @@ showDetails(painting);
 
 console.log(painting.title);
 ``` 
+THE STARRY NIGHT
 
 ### Question 8
 What will be the output of the following code?
@@ -101,6 +108,17 @@ copy.phone[0] = 654321;
 console.log(original);
 console.log(copy);
 ```
+object {
+  name: "Alice",
+  age: 30,
+  phone: Array [123456, 789012]
+}
+
+object {
+  name: "Bob",
+  age: 30,
+  phone: Array(1) [654321]
+}
 
 ### Question 9
 What will be logged to the console?
@@ -111,6 +129,8 @@ const new_obj = Object.assign({}, obj);
 console.log(new_obj); 
 console.log(new_obj === obj);
 ```
+Object { a: 1, b: 2 }
+false
 
 ### Question 10
 What will be the output of the following code?
@@ -126,6 +146,7 @@ shallowCopy.hobbies.push("coding");
 
 console.log(person.hobbies);
 ```
+Object [ "reading", "gaming", "coding" ]
 
 ### Question 11
 What will be logged to the console?
@@ -138,6 +159,7 @@ deepCopy[2][0] = 99;
 
 console.log(numbers[2][0]);
 ```
+3
 
 ### Question 12
 What will be logged to the console?
@@ -160,6 +182,7 @@ changeAgeAndReference(person1);
 
 console.log(person1.age);
 ```
+25
 
 ### Question 13
 What will be logged to the console?
@@ -171,6 +194,7 @@ shallowCopy[0].a = 99;
 
 console.log(originalArray[0].a);
 ```
+99
 
 ### Question 14
 What will be logged to the console?
@@ -190,5 +214,4 @@ let copy = JSON.parse(JSON.stringify(obj));
 
 console.log(typeof copy.func);
 ```
-
-
+undefined

@@ -16,7 +16,8 @@ function test() {
 test();
 console.log(x);
 ```
-
+20
+10
 
 ## Question 2
 
@@ -35,7 +36,7 @@ function test() {
 test();
 console.log(x);
 ```
-
+50
 
 ## Question 3
 
@@ -52,7 +53,7 @@ if (true) {
 
 console.log(x);
 ```
-
+10, 20, 10
 ## Question 4
 
 What will the code output to the console?
@@ -75,6 +76,8 @@ function test() {
 
 test();
 ```
+foo
+bar
 
 ## Question 5
 
@@ -98,5 +101,4 @@ function test() {
 
 test();
 ```
-
-
+Error: bar is not a function
